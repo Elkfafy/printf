@@ -5,11 +5,12 @@
 #include <stdarg.h>
 int _putchar(char);
 int print_str(char *);
-int print_int(int);
+int print_int(int, char);
 int get_int_length(int);
-char *int_to_str(int);
+char *int_to_str(int, char);
 int get_str_length(char *);
 int get_arr_size(void *, unsigned int);
 int get_str_length(char *);
+int print_float(float, unsigned int, char);
 
 #endif

@@ -21,16 +21,17 @@ int get_int_length(int num)
 /**
  * int_to_str - integer to string
  * @num: input number
- * @sign: input sign
+ * @sgn: input sign
  *
  * Return: the parsed string
  */
-char *int_to_str(int num)
+char *int_to_str(int num, char sgn)
 {
-	char sign = '+';
+	char sign = sgn;
+	int if_sign = sgn ? 1 : 0;
 	int num_length = get_int_length(num), cont;
-	char *result = malloc((num_length + 2) * sizeof(char));
-	
+	char *result = malloc((num_length + 1 + if_sign) * sizeof(char));
+
 	if (result == NULL)
 		return (NULL);
 	result[num_length] = '\0';
@@ -45,18 +46,20 @@ char *int_to_str(int num)
 		result[num_length] = cont + '0';
 		num /= 10;
 	}
-	result[num_length] = sign;
+	if (if_sign)
+		result[num_length] = sign;
 	return (result);
 }
 /**
  * print_int - print integer
  * @num: input number
+ * @sign: input sign
  *
  * Return: number of printing output
  */
-int print_int(int num)
+int print_int(int num, char sign)
 {
-	char *str_num = int_to_str(num);
+	char *str_num = int_to_str(num, sign);
 
 	return (print_str(str_num));
 }
