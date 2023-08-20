@@ -6,7 +6,9 @@
  */
 int main(void)
 {
-	print_float(2.2222, 2, 0);
+	printf("printf: %.20f\n", -2.22f);
+	print_str("print_float: ");
+	print_float(-2.22f, 20, 0);
 	_putchar('\n');
 	return (0);
 }

@@ -15,14 +15,23 @@ int print_float(float num, unsigned int percesion, char sign)
 
 	if (remaining < 0)
 		remaining *= -1;
-	for (i = 0; i < percesion; i++)
-		remaining *= 10;
 	sum += print_int(container, sign);
-	container = remaining;
-	if (remaining != 0)
+	if (remaining != 0 || percesion != 0)
 	{
 		sum += _putchar('.');
-		sum += print_int(remaining, sign);
+		for (i = 0; i < percesion; i++)
+		{
+			remaining *= 10;
+			container = (int) remaining;
+			remaining = remaining - container;
+			if (i == percesion - 1)
+			{
+				remaining *= 10;
+				if ((int) remaining > 5)
+					container++;
+			}
+			sum += _putchar(container + '0');
+		}
 	}
 	return (sum);
 }

@@ -28,14 +28,15 @@ int get_int_length(int num)
 char *int_to_str(int num, char sgn)
 {
 	char sign = sgn;
-	int if_sign = sgn ? 1 : 0;
+	int if_sign = (sgn || num < 0)? 1 : 0;
 	int num_length = get_int_length(num), cont;
 	char *result = malloc((num_length + 1 + if_sign) * sizeof(char));
 
 	if (result == NULL)
 		return (NULL);
-	result[num_length] = '\0';
-	for (num_length -= 1; num_length >= if_sign; num_length--)
+	result[num_length + if_sign] = '\0';
+	num_length = num_length + if_sign - 1;
+	for (; num_length >= if_sign; num_length--)
 	{
 		cont = num % 10;
 		if (cont < 0)

@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	printf("%.20f\n", 0.12345678901234567890);
+	printf("%.9f\n", 0.12345);
 	return (0);
 }
 
