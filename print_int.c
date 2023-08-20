@@ -13,7 +13,7 @@ int get_int_length(int num)
 		return (1);
 	while (num != 0)
 	{
-		num %= 10;
+		num /= 10;
 		count++;
 	}
 	return (count);
@@ -35,7 +35,7 @@ char *int_to_str(int num, char sgn)
 	if (result == NULL)
 		return (NULL);
 	result[num_length] = '\0';
-	for (num_length -= 1; num_length > 0; num_length--)
+	for (num_length -= 1; num_length >= if_sign; num_length--)
 	{
 		cont = num % 10;
 		if (cont < 0)
