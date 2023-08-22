@@ -61,6 +61,8 @@ char *int_to_str(int num, char sgn)
 int print_int(int num, char sign)
 {
 	char *str_num = int_to_str(num, sign);
+	int sum = print_str(str_num);
 
-	return (print_str(str_num));
+	free(str_num);
+	return (sum);
 }
