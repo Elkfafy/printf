@@ -10,5 +10,8 @@ int main(void)
 	int real = printf("%s%c", "This is for testing", '\n');
 
 	printf("pridicted = %d, real =%d\n", pridicted, real);
+	pridicted = _printf("ahmed %s%%%c\n", "Test", '\n');
+	real = printf("ahmed %s%%%c\n", "Test", '\n');
+	printf("pridicted = %d, real =%d\n", pridicted, real);
 	return (0);
 }

@@ -34,7 +34,6 @@ int handle_format(char **format, va_list args)
 	(*format)++;
 	return (chars_printed);
 }
-			
 /**
  * _printf - a function that produces output according to a format.
  * @format: the string.
@@ -62,5 +61,5 @@ int _printf(char *format, ...)
 		}
 	}
 	va_end(args);
-	return(chars_printed);
+	return (chars_printed);
 }

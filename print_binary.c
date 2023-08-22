@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * print_binary_helper - helper function to use recurssion
+ * @num: input number
+ *
+ * Return: character printed number
+ */
 int print_binary_helper(unsigned int num)
 {
 	if (num == 0)
@@ -23,14 +29,5 @@ int print_binary(unsigned int num, char sign)
 		return (sum);
 	}
 	sum += print_binary_helper(num);
-/**
-	while (num != 0)
-	{
-		sum += _putchar(1);
-		bit = num & 1;
-		num = num >> 1;
-		sum += _putchar(bit + '0');
-	}
-**/
 	return (sum);
 }

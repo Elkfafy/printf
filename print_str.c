@@ -7,9 +7,14 @@
  */
 int print_str(char *str)
 {
-	int i, sum = 0;
+	int i, container, sum = 0;
 
 	for (i = 0; str[i] != '\0'; i++)
-		sum += _putchar(str[i]);
+	{
+		container = _putchar(str[i]);
+		if (container == -1)
+			return (-1);
+		sum += container;
+	}
 	return (sum);
 }

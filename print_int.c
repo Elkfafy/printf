@@ -28,7 +28,7 @@ int get_int_length(int num)
 char *int_to_str(int num, char sgn)
 {
 	char sign = sgn;
-	int if_sign = (sgn || num < 0)? 1 : 0;
+	int if_sign = (sgn || num < 0) ? 1 : 0;
 	int num_length = get_int_length(num), cont;
 	char *result = malloc((num_length + 1 + if_sign) * sizeof(char));
 
