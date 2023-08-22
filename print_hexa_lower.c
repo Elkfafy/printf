@@ -1,0 +1,32 @@
+#include "main.h"
+
+/**
+ * int_hex_lower - a function that converts int to hexadecimal in lowercase.
+ * @n: the integer
+ * Return: void.
+ */
+void int_hex_lower(int n)
+{
+  int i = 0, x, remainder;
+  char hex[10];
+  if (n == 0)
+      _putchar ('0');
+  return;
+  while (n > 0)
+    {
+      remainder = n % 16;
+      if (remainder < 10)
+	{
+	  hex[i++] = remainder + '0';
+	}
+      else
+	{
+	  hex[i++] = remainder - 10 + 'a';
+	}
+      n /= 16;
+    }
+  for (x = i - 1; x >= 0; i--)
+    {
+      _putchar(hex[i]);
+    }
+}
