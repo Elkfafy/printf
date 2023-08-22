@@ -9,6 +9,6 @@ int main(void)
 	int pridicted = _printf("%s%c", "This is for testing", '\n');
 	int real = printf("%s%c", "This is for testing", '\n');
 
-	printf("pridicted = %d, real =d\n", pridicted, real);
+	printf("pridicted = %d, real =%d\n", pridicted, real);
 	return (0);
 }

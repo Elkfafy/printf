@@ -13,4 +13,5 @@ int get_arr_size(void *, unsigned int);
 int get_str_length(char *);
 int print_float(float, unsigned int, char);
 int print_binary(unsigned int, char);
+int _printf(char *, ...);
 #endif
