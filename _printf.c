@@ -6,7 +6,7 @@
  *
  * Return: characters printed
  */
-int handle_format(char **format, va_list args)
+int handle_format(const char **format, va_list args)
 {
 	int container, chars_printed = 0;
 
@@ -52,7 +52,7 @@ int handle_format(char **format, va_list args)
  * @format: the string.
  * Return: number of characters printed excluding null.
  */
-int _printf(char *format, ...)
+int _printf(const char *format, ...)
 {
 	int chars_printed = 0;
 	va_list args;

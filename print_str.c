@@ -9,11 +9,13 @@ int print_str(char *str)
 {
 	int i, container, sum = 0;
 
+	if (str == NULL)
+		str = "(null)";
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		container = _putchar(str[i]);
-		if (container == -1)
-			return (-1);
+		if (container < 0)
+			return (container);
 		sum += container;
 	}
 	return (sum);
