@@ -20,12 +20,19 @@ int print_binary_helper(unsigned int num)
  */
 int print_binary(unsigned int num, char sign)
 {
+	int container;
 	unsigned int sum = 0;
 
-	sum += _putchar(sign);
+	container = _putchar(sign);
+	if (container == -1)
+		return (-1);
+	sum += container;
 	if (num == 0)
 	{
-		sum += _putchar('0');
+		container = _putchar('0');
+		if (container == -1)
+			return (-1);
+		sum += container;
 		return (sum);
 	}
 	sum += print_binary_helper(num);

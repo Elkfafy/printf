@@ -16,5 +16,6 @@ int main(void)
 	pridicted = _printf("%i, %d\n", 1234, -20);
 	real = printf("%i, %d\n", 1234, -20);
 	printf("pridicted = %d, real =%d\n", pridicted, real);
+	pridicted = _printf("binary: %b\n", 1234);
 	return (0);
 }

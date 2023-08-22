@@ -37,6 +37,12 @@ int handle_format(char **format, va_list args)
 				return (-1);
 			chars_printed += container;
 			break;
+		case 'b':
+			container = print_binary(va_arg(args, unsigned int), 0);
+			if (container == -1)
+				return (-1);
+			chars_printed += container;
+			break;
 	}
 	(*format)++;
 	return (chars_printed);
