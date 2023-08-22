@@ -58,7 +58,10 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	if (format == NULL)
-		return (0);
+	{
+		chars_printed = print_str("(null)");
+		return (chars_printed);
+	}
 	va_start(args, format);
 	while (*format != '\0')
 	{

@@ -25,6 +25,6 @@ int main(void)
 	pridicted = _printf("%d\n", 0);
 	real = printf("%d\n", 0);
 	printf("pridicted = %d, real = %d\n", pridicted, real);
-	pridicted = _printf("binary: %b\n", 0);
+	pridicted = _printf("binary: %b\n", INT_MAX);
 	return (0);
 }
