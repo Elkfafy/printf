@@ -14,33 +14,33 @@ int handle_format(const char **format, va_list args)
 	{
 		case '%':
 			container = _putchar('%');
-			if (container == -1)
-				return (-1);
+			if (container < 0)
+				return (container);
 			chars_printed += container;
 			break;
 		case 'c':
 			container = _putchar(va_arg(args, int));
-			if (container == -1)
-				return (-1);
+			if (container < 0)
+				return (container);
 			chars_printed += container;
 			break;
 		case 's':
 			container = print_str(va_arg(args, char *));
-			if (container == -1)
-				return (-1);
+			if (container < 0)
+				return (container);
 			chars_printed += container;
 			break;
 		case 'd':
 		case 'i':
 			container = print_int(va_arg(args, int), 0);
-			if (container == -1)
-				return (-1);
+			if (container < 0)
+				return (container);
 			chars_printed += container;
 			break;
 		case 'b':
 			container = print_binary(va_arg(args, unsigned int), 0);
-			if (container == -1)
-				return (-1);
+			if (container < 0)
+				return (container);
 			chars_printed += container;
 			break;
 	}
