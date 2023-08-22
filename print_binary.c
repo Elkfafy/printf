@@ -30,8 +30,8 @@ int print_binary(unsigned int num, char sign)
 	if (num == 0)
 	{
 		container = _putchar('0');
-		if (container == -1)
-			return (-1);
+		if (container < 0)
+			return (container);
 		sum += container;
 		return (sum);
 	}
