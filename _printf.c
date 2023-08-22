@@ -30,6 +30,13 @@ int handle_format(char **format, va_list args)
 				return (-1);
 			chars_printed += container;
 			break;
+		case 'd':
+		case 'i':
+			container = print_int(va_arg(args, int), 0);
+			if (container == -1)
+				return (-1);
+			chars_printed += container;
+			break;
 	}
 	(*format)++;
 	return (chars_printed);

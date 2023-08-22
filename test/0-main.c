@@ -13,5 +13,8 @@ int main(void)
 	pridicted = _printf("ahmed %s%%%c\n", "Test", '\n');
 	real = printf("ahmed %s%%%c\n", "Test", '\n');
 	printf("pridicted = %d, real =%d\n", pridicted, real);
+	pridicted = _printf("%i, %d\n", 1234, -20);
+	real = printf("%i, %d\n", 1234, -20);
+	printf("pridicted = %d, real =%d\n", pridicted, real);
 	return (0);
 }
