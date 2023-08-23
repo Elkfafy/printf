@@ -1,17 +1,17 @@
 #include "main.h"
 
 /**
- * int_hex_lower - a function that converts int to hexadecimal in lowercase.
+ * print_hexa_lower - a function that converts int to hexadecimal in lowercase.
  * @n: the integer
  * Return: void.
  */
-void int_hex_lower(int n)
+int print_hexa_lower(unsigned int n)
 {
-  int i = 0, x, remainder;
-  char hex[10];
+  int i = 0, x;
+  unsigned int remainder;
+  char hex[16];
   if (n == 0)
       _putchar ('0');
-  return;
   while (n > 0)
     {
       remainder = n % 16;
@@ -25,8 +25,9 @@ void int_hex_lower(int n)
 	}
       n /= 16;
     }
-  for (x = i - 1; x >= 0; i--)
+  for (x = i - 1; x >= 0; x--)
     {
-      _putchar(hex[i]);
+      _putchar(hex[x]);
     }
+  return (i);
 }

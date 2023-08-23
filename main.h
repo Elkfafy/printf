@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+
 int _putchar(char);
 int print_str(char *);
 int print_int(int, char);
@@ -14,6 +15,6 @@ int get_str_length(char *);
 int print_float(float, unsigned int, char);
 int print_binary(unsigned int, char);
 int _printf(const char *, ...);
-void int_hex_lower(int n);
-void int_hex_upper(int n);
+int print_hexa_lower(unsigned int n);
+int print_hexa_upper(unsigned int n);
 #endif
