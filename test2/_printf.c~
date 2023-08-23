@@ -60,13 +60,13 @@ int container, chars_printed = 0;
 switch (**format)
 {
 case 'x':
-container = print_hexa_lower(va_arg(args, unsigned int));
+container = print_hexa_lower(va_arg(args, int));
 if (container < 0)
 return (container);
 chars_printed += container;
 break;
 case 'X':
-container = print_hexa_upper(va_arg(args, unsigned int));
+container = print_hexa_upper(va_arg(args, int));
 if (container < 0)
 return (container);
 chars_printed += container;

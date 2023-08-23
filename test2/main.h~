@@ -14,6 +14,6 @@ int get_str_length(char *);
 int print_float(float, unsigned int, char);
 int print_binary(unsigned int, char);
 int _printf(const char *, ...);
-int print_hexa_lower(unsigned int n);
-int print_hexa_upper(unsigned int n);
+int print_hexa_lower(int n);
+int print_hexa_upper(int n);
 #endif
