@@ -68,7 +68,7 @@ container = print_hexa_upper(va_arg(args, unsigned int));
 if (container < 0)
 return (container);
 chars_printed += container;
-break;
+break
 }
 (*format)++;
 return (chars_printed);
