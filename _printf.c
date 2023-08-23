@@ -48,34 +48,6 @@ int handle_format(const char **format, va_list args)
 	return (chars_printed);
 }
 /**
- * handle_formatB - a function that handles x,X,o,u specifiers.
- * @format: the input specifiers.
- * @args: va_list.
- * Return: characters printed.
- */
-int handle_formatB(const char **format, va_list args)
-{
-int container, chars_printed = 0;
-
-switch (**format)
-{
-case 'x':
-container = print_hexa_lower(va_arg(args, unsigned int));
-if (container < 0)
-return (container);
-chars_printed += container;
-break;
-case 'X':
-container = print_hexa_upper(va_arg(args, unsigned int));
-if (container < 0)
-return (container);
-chars_printed += container;
-break;
-}
-(*format)++;
-return (chars_printed);
-}
-/**
  * _printf - a function that produces output according to a format.
  * @format: the string.
  * Return: number of characters printed excluding null.
@@ -96,14 +68,7 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			if (*format == 'c' || *format == 's' || *format == 'i' || *format == 'b')
-			{
 			chars_printed += handle_format(&format, args);
-			}
-			if (*format == 'x' || *format == 'X' || *format == 'o' || *format == 'u')
-			{
-			chars_printed += handle_formatB(&format, args);
-			}
 		}
 		else
 		{
